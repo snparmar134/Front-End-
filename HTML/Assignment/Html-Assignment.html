@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Are the HTML tags and elements the same thing?</h2>
+
+    <p>No, html tags and elements are not same at all</p>
+    <img src="../../Assets/Images/download.png" alt="">
+
+    <p>
+        <strong> HTML Tags </strong>
+        <br>
+        Tags are the starting and ending parts of an HTML element. They begin with < symbol and end with> symbol.
+            Whatever written inside < and> are called tags. like <strong>
+                    < p>
+                </strong>
+                <br><br>
+
+                <strong>Elements</strong>
+                <br>
+                Elements enclose the contents in between the tags. They consist of some kind of structure or expression.
+                It
+                generally consists of a start tag, content and an end tag.
+    </p>
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What are tags and attributes in HTML?</h2>
+
+    <p>
+        <strong>Tags</strong>
+    </p>
+    <ul>
+        <li>HTML tags are like keywords which defines that how web browser will format and display the content.</li>
+        <li>All HTML tags must enclosed within <> these brackets.</li>
+        <li>Every tag in HTML perform different tasks.</li>
+    </ul>
+
+    <p>
+        <strong>Attributes</strong>
+    </p>
+    <ul>
+        <li>Attribute defines the behaviour of that element.</li>
+        <li>Attributes should always be applied with start tag.</li>
+        <li>The Attribute should always be applied with its name and value pair</li>
+        <li>You can add multiple attributes in one HTML element, but need to give space between two attributes.</li>
+    </ul>
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What are void elements in HTML?</h2>
+    <ol>
+        <li>
+            Tags that dont have a CLOSING TAG are called <strong>Self Closing</strong> or <strong>Void Elements</strong>
+        </li>
+
+        <li>
+            Void elements cannot have content inside it.
+        </li>
+
+        <li>
+            Void elements have attributes.
+        </li>
+
+        <li>
+            Void elements cannot be nested.
+        </li>
+    </ol>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What are HTML Entities? </h2>
+    <ul>
+        <li>
+            HTML character entities are used as a replacement of reserved characters in HTML. You can also replace
+            characters that are not present on your keyboard by entities.
+        </li>
+
+        <li>
+            These characters are replaced because some characters are reserved in HTML. HTML entities provide a wide
+            range of characters which can allow you to add icons, geometric shapes, mathematical operators, etc.
+        </li>
+
+        <li>
+            <strong>For Example :-</strong> if you use less than (<) or greater than (>) symbols in your text, the
+                browser can mix them with tags that's
+                why character entities are used in HTML to display reserved characters.
+        </li>
+    </ul>
+    <br>
+
+    <strong>Here is list of HTML Entities</strong> <br>
+    <img src="../../Assets/Images/Html entities.png" width="35%" alt="">
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+
+    <h2>What are different types of lists in HTML?</h2>
+    <p>HTML lists allow web developers to group a set of related items in lists. <br> <br>
+        <strong>There is two types of lists in HTML</strong>
+    </p>
+    <ol>
+        <li>
+            Unodered list
+            <ul type="disc">
+                <li>
+                    An unordered list starts with the < ul> tag. Each list item starts with the < li> tag.
+                            < /li>
+                </li>
+
+                <li>
+                    The list items will be marked with bullets (small black circles) by default:
+                    <br>
+                    <img src="../../Assets/Images/ul.png" alt="">
+                </li>
+            </ul>
+
+        </li>
+        <br>
+        <li>
+            Odered list
+            <ul type="disc">
+                <li>
+                    An ordered list starts with the < ol> tag. Each list item starts with the < li> tag.
+                </li>
+
+                <li>
+                    The list items will be marked with numbers by default:
+                    <br>
+                    <img src="../../Assets/Images/ol.png" alt="">
+                </li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li>
+            Description Lists
+            <ul type="disc">
+                <li>
+                    A description list is a list of terms, with a description of each term.
+                </li>
+
+                <li>
+                    The < dl> tag defines the description list, the < dt> tag defines the term (name), and the < dd> tag
+                                describes each term:
+                                <br>
+                                <img src="../../Assets/Images/dd.png" alt="">
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+
+    <h2>What is the ‘class’ attribute in HTML?</h2>
+    <ul>
+        <li>
+            The class attribute specifies one or more classnames for an element.
+        </li>
+
+        <li>
+            The class attribute can be used on any HTML element
+        </li>
+
+        <li>
+            The class name can be used by CSS and JavaScript to perform certain tasks for elements with the specified
+            class name.
+        </li>
+    </ul>
+
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML
+        elements?</h2>
+
+    <ol>
+        <li>
+            id attribute
+            <ul type="disc">
+                <li>
+                    The id attribute is a unique identifier that is used to specify the document. It is used by CSS and
+                    JavaScript to perform a certain task for a unique element. In CSS, the id attribute is written using
+                    the # symbol followed by id.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Class attribute
+            <ul type="disc">
+                <li>
+                    The class attribute is used to specify one or more class names for an HTML element. The class
+                    attribute can be used on any HTML element. The class name can be used by CSS and JavaScript to
+                    perform certain tasks for elements with the specified class name. The class name in CSS stylesheet
+                    using “.” symbol.
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What are the various formatting tags in HTML?</h2>
+    <p>Formatting elements were designed to display special types of text</p>
+    Example :- <br>
+    <img src="../../Assets/Images/formatting tags.png" alt="">
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>How is Cell Padding different from Cell Spacing?</h2>
+    <ul>
+        <li>
+            <strong>Cellpadding => </strong> Cellpadding specifies the space between the border of a table cell and its
+            contents (i.e) it defines the whitespace between the cell edge and the content of the cell.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Cellspacing => </strong>Cellspacing specifies the space between cells (i.e) it defines the
+            whitespace between the edges of the adjacent cells.
+            <br><br>
+            <img src="../../Assets/Images/cellpadding..spacing.png" alt="">
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>How can we club two or more rows or columns into a single row or column in an HTML
+        table? </h2>
+
+    <ol>
+        <li>
+            It can be done by using the rowspan and colspan attribute in HTML.
+        </li>
+        <br>
+        <li>
+            The rowspan is used to merge or combine the number of cells in a row whereas the colspan is used to merge
+            column cells in a table
+        </li>
+    </ol>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>What is the difference between a block-level element and an inline element?</h2>
+    <ol>
+        <li>
+            <strong>Block-level Elements</strong>
+            <ul type="disc">
+                <li>
+                    A block-level element always starts on a new line, and the browsers automatically add some space (a
+                    margin) before and after the element
+                </li>
+
+                <li>
+                    A block-level element always takes up the full width available (stretches out to the left and right
+                    as far as it can).
+                </li>
+
+                <li>
+                    Two commonly used block elements are: < p> and < div>.
+                            <br><br>
+                            <img src="../../Assets/Images/block level.png" alt="">
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>
+            <strong>Inline Elements</strong>
+            <ul type="disc">
+                <li>
+                    An inline element does not start on a new line.
+                </li>
+
+                <li>
+                    An inline element only takes up as much width as necessary.
+                    <br><br>
+                    <img src="../../Assets/Images/inline.png" alt="">
+                </li>
+            </ul>
+        </li>
+    </ol>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+    <h2>How to create a Hyperlink in HTML?</h2>
+    <ul>
+        <li>
+            The HTML < a> tag defines a hyperlink. It has the following syntax: <strong>
+                    < a<br> hr size="5" color="black"e<br>f="url">link text< /a>
+                </strong>
+        </li> <br>
+
+        <li>
+            The most important attribute of the <a> element is the<br> hr size="5" color="black"e<br>f attribute, which
+                indicates the link's
+                destination.
+        </li> <br>
+
+        <li>
+            The link text is the part that will be visible to the reader. <br> Clicking on the link text, will send the
+            reader to the specified URL address.
+        </li> <br>
+
+        <li>
+            An unvisited link is underlined and blue <br>A visited link is underlined and purple <br>An active link is
+            underlined and red
+        </li>
+    </ul>
+
+
+    <br>
+    <hr size="5" color="black"><br>
+
+
+
+    <h2>What is the use of an iframe tag?</h2>
+    <ul>
+        <li>
+            iframe (inline frame) tag is used to load another web page's data in our html document
+        </li> <br>
+
+        <li>
+            It essentially puts another webpage within the parent page.
+        </li> <br>
+
+        <li>
+            They are commonly used for advertisements, embedded videos, web analytics and interactive content.
+        </li> <br>
+    </ul>
+
+    Example with syntax of "iframe" <br>
+    <strong>
+        < iframe src="https://www.google.com/maps/embed?>< /iframe></strong> <br> <br>
+        
+            <iframe
+                src="
+            https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14513.07453039692!2d73.6819255!3d24.5799237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5666895c2ad%3A0x231870e0ef06b671!2sGangour%20Ghat!5e0!3m2!1sen!2sin!4v1684993203865!5m2!1sen!2sin"
+            width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+
+            <h2>What is the use of a span tag? Explain with example?</h2>
+
+            <ul>
+                <li>
+                    The HTML span element is a generic inline container for inline elements and content
+                </li> <br>
+
+                <li>
+                    It is used to group elements for styling purposes (by using the class or id attributes), A better
+                    way to use it when no other semantic element is available.
+                </li> <br>
+            </ul>
+
+            <strong>Example :-</strong>
+            <br>
+            <img src="../../Assets/Images/span.png" alt="">
+            <br>
+            <p>Shubhangi
+                <span style="color:red;font-weight:bolder">
+                    computer science</span> portal for
+                <span style="background-color: lightgreen;">Shubhangi</span>.
+            </p>
+
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+
+            <h2>How to insert a picture into a background image of a web page?</h2>
+            <ul type="disc">
+                <li>
+                    To add a background image on an HTML element, use the HTML style attribute and the CSS
+                    background-image property:
+                    <br>
+                    <strong>Example :- < p style="background-image: url('img.jpg');">
+                            < /p></strong>
+                </li> <br>
+
+                <li>
+                    You can also specify the background image in the &lt;style> element, in the < head> section:
+                        <br>
+                </li>
+                <br>
+
+                <li>
+                    If you want the entire page to have a background image, you must specify the background image on the
+                    < body> element:
+                        <br>
+                </li>
+                <br>
+
+                <li>
+                    <strong>If the background image is smaller than the element, the image will repeat itself,
+                        horizontally and vertically, until it reaches the end of the element:
+
+                    </strong>
+                </li>
+                <br>
+
+                <li>
+                    <strong>To avoid the background image from repeating itself, set the background-repeat property to
+                        no-repeat.</strong>
+                </li>
+                <br>
+                <img src="../../Assets/Images/bg img.png" alt="">
+            </ul>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+
+            <h2>How are active links different from normal links?</h2>
+            <ul>
+                <li>
+                    <a style="color: red;" <br> hr size="5" color="black"e<br>f="">An active link is underlined and
+                        red</a>
+                </li>
+
+                <br>
+
+                <li>
+                    <a style="color: #A020F0" <br> hr size="5" color="black"e<br>f="">A visited link is underlined and
+                        purple</a>
+                </li>
+
+                <br>
+
+                <li>
+                    <a style="color: blue" <br> hr size="5" color="black"e<br>f="">An unvisited link is underlined and
+                        blue</a>
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>You can change the link state colors, by using CSS:</strong>
+                </li>
+            </ul>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+            <h2>What are the different tags to separate sections of text? </h2>
+            <ul>
+                <li>
+                    <strong>
+                        < br>
+                    </strong> tag – It is used to separate the line of text. It breaks the current line and shifts the
+                    flow of the text to a new line.
+                </li>
+                <br>
+                <li>
+                    <strong>
+                        < p>
+                    </strong> tag–This tag is used to write a paragraph of text.
+                </li>
+                <br>
+                <li>
+                    <strong>
+                        < blockquote>
+                    </strong> tag–This tag is used to define large quoted sections.
+                </li>
+            </ul>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+            <h2>What is SVG? </h2>
+
+            <ul>
+                <li>
+                    The HTML <strong>
+                        < svg>
+                    </strong> element is a container for SVG graphics.
+                </li>
+                <br>
+                <li>
+                    SVG defines vector-based graphics in XML format.
+                </li>
+                <br>
+                <li>
+                    SVG stands for Scalable Vector Graphics
+                </li>
+                <br>
+                <li>
+                    SVG is used to define graphics for the Web
+                </li>
+                <br>
+                <li>
+                    SVG is a W3C recommendation
+                </li>
+                <br>
+                <li>
+                    SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+                    <br>
+                    <img src="../../Assets/Images/svg.png" alt="">
+                </li>
+            </ul>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+            <h2>What is difference between HTML and XHTML? </h2>
+            <ol>
+                <li>
+                    <strong>HTML
+                        <br><br>
+                        HTML is the Hypertext Markup Language which is the most widely used language over the internet.
+                        <br><br>
+                        HTML is used to create web pages and link them from one to another
+                    </strong>
+                    <br><br>
+                    <strong>Advantages of HTML</strong>
+                    <ul type=disc>
+                        <li>
+                            Easier to code: HTML5 has a more relaxed syntax compared to XHTML, which makes it easier to
+                            code
+                        </li>
+                        <br>
+                        <li>
+                            Backward compatibility: HTML5 is designed to be backward compatible with older versions of
+                            HTML, which means that it can be used with older web browsers
+                        </li>
+                        <br>
+                        <li>
+                            Multimedia support: HTML5 includes support for multimedia elements such as video and audio,
+                            which makes it easier to create web pages that include multimedia content
+                        </li>
+                    </ul>
+                    <br>
+
+                    <strong>Disadvantages of HTML</strong>
+                    <ul type=disc>
+                        <li>
+                            Non-standardization: HTML5 is not a standardized markup language, which means that different
+                            web browsers may interpret it differently
+                        </li>
+                        <br>
+                        <li>
+                            Security issues: HTML5 includes new features such as geolocation and offline storage, which
+                            can create security vulnerabilities if not implemented properly
+                        </li>
+                        <br>
+                        <li>
+                            Incompatibility with older web browsers: Some older web browsers may not be able to display
+                            HTML5 documents properly, which can create compatibility issues for developers
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <strong>XHTML
+                        <br><br>
+                        XHTML stands for Extensible Hypertext Markup Language
+                        <br><br>
+                        It can be considered as a part of the XML markup language this is because of XHTML have features
+                        of both XML and HTML
+                        <br><br>
+                        XHTML is extended from XML and HTML. XHTML can be considered as a better version of HTML
+                    </strong>
+                    <br><br>
+                    <strong>Advantages of XHTML</strong>
+                    <ul type=disc>
+                        <li>
+                            Strict syntax: XHTML has a stricter syntax compared to HTML5, which means that it is more
+                            structured and easier to read
+                        </li>
+                        <br>
+                        <li>
+                            Standardization: XHTML follows the syntax rules of XML, which is a standardized markup
+                            language. This makes it easier to create interoperable web pages that work well with
+                            different web browsers and devices
+                        </li>
+                        <br>
+                        <li>
+                            Better for parsing: XHTML is easier to parse and process than HTML5, which makes it a better
+                            choice for developers who want to create web pages that can be easily processed by other
+                            software tools
+                        </li>
+                    </ul>
+                    <br>
+                    <strong>Disadvantages of XHTML</strong>
+                    <ul type=disc>
+                        <li>
+                            More difficult to code: XHTML has a stricter syntax compared to HTML5, which can make it
+                            more difficult to code.
+                        </li>
+                        <br>
+                        <li>
+                            Not backward compatible: XHTML is not backward compatible with older versions of HTML, which
+                            means that some older web browsers may not be able to display XHTML documents properly
+                        </li>
+                        <br>
+                        <li>
+                            Requires more bandwidth: XHTML documents tend to require more bandwidth compared to HTML5
+                            documents due to their stricter syntax and increased number of tags
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <img src="../../Assets/Images/html vs xhtml.png" alt="">
+            </ol>
+
+
+            <br>
+            <hr size="5" color="black"><br>
+
+
+            <h2>What are logical and physical tags in HTML?</h2>
+            <ol>
+                <li>
+                    <strong>Physical Tags </strong> <br><br>
+                    Physical Tags are used in HTML to provide actual physical formatting to the text. Following are the
+                    Physical tags commonly used in HTML.
+                </li>
+                <br>
+                <img src="../../Assets/Images/physical tags.png" alt="">
+
+                <li>
+                    <strong>Logical Tags</strong> <br><br>
+                    Logical Tags are used in HTML to display the text according to the logical styles. Following are the
+                    Logical tags commonly used in HTML
+                </li>
+                <br>
+                <img src="../../Assets/Images/logical tags.png" alt="">
+            </ol>
+
+
+
+
+</body>
+
+</html>
