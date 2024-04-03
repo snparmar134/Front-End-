@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 style="text-align: center; font-size: 30px;">Advance JavaScript <br>
+        MODULE: 1 (Introduction and Code Quality)</h2>
+    <h3>● Write a program to Show an alert</h3>
+    <p>alert("Hello, this is an alert!");
+    </p>
+    <hr>
+    <h3>● What will be the result for these expressions?
+    </h3>
+    <h4>1. 5 > 4</h4>
+    <p>The expression 5 > 4 evaluates to true. This is because 5 is indeed greater than 4, and in JavaScript, when you
+        use the > operator, it returns true if the left operand is greater than the right operand, otherwise, it returns
+        false. So, in this case, the result will be true.</p>
+
+    <h4>2. "apple" > "pineapple"
+    </h4>
+    <p>In JavaScript, when you compare strings using the > operator, it compares them based on their lexicographical
+        (dictionary) order. <br>
+
+        In this case, "apple" comes before "pineapple" in the dictionary, so "apple" > "pineapple" evaluates to false.
+        This might seem counterintuitive at first, but it's because JavaScript compares the strings character by
+        character, and in this comparison, the first characters "a" in both strings are the same, but the second
+        character "p" in "apple" comes before the second character "i" in "pineapple", hence "apple" is considered less
+        than "pineapple". Therefore, the result will be false.</p>
+    <h4>3. "2" > "12"</h4>
+    <p>In JavaScript, when comparing strings, the comparison is done character by character based on Unicode values.
+        <br>
+
+        So, in the expression "2" > "12", the character "2" has a higher Unicode value than "1", so the string "2" is
+        actually greater than the string "12". <br>
+
+        Therefore, "2" > "12" evaluates to true.
+    </p>
+
+    <h4>4. undefined == null</h4>
+    <p>In JavaScript, undefined and null are two distinct values, but they are considered loosely equal (==) to each
+        other. <br>
+
+        So, undefined == null evaluates to true. However, it's important to note that === is the strict equality
+        operator in JavaScript, and it would return false in this case because it compares both value and type, and
+        undefined and null have different types.</p>
+    <h4>5. undefined === null</h4>
+    <p>In JavaScript, the === operator checks for strict equality, meaning it compares both the value and the type of
+        the operands. <br>
+
+        In the expression undefined === null, undefined is a type of undefined, while null is a distinct type
+        representing an absence of value or "null". Therefore, undefined and null are not strictly equal. <br>
+
+        So, undefined === null evaluates to false.</p>
+    <h4>6. null == "\n0\n"</h4>
+    <p>In JavaScript, the == operator performs type coercion, meaning it tries to convert operands to a common type
+        before comparison. <br>
+
+        In this case, null is a special value representing the absence of a value, while "\n0\n" is a non-empty string.
+        <br>
+
+        When comparing a non-empty string to null, JavaScript coerces null to convert it to a number, which becomes 0.
+        Then, "\n0\n" is not an empty string, so it's coerced to a number, which becomes 0 due to the leading and
+        trailing newline characters being ignored. <br>
+
+        So, null == "\n0\n" evaluates to true because both are coerced to the number 0 during comparison.
+    </p>
+    <h4>7. 7. null === +"\n0\n"</h4>
+    <p>In JavaScript, the === operator performs strict equality comparison, meaning it checks both the value and the
+        type of the operands without type coercion. <br>
+
+        In this expression, null is of type object, while +"\n0\n" is a string that's coerced into a number. The +
+        operator in front of "\n0\n" coerces it into a number, which becomes 0. <br>
+
+        Therefore, null === +"\n0\n" compares the null object to the number 0, and since they are of different types
+        (object vs number), the result will be false.</p>
+    <hr>
+    <h3>● Will alert be shown? <br>
+        if ("0") { alert( 'Hello'); }</h3>
+    <p>Yes, the alert will be shown. <br> <br>
+
+        In JavaScript, when using a non-empty string like "0" in a condition, it evaluates to true. Therefore, the
+        condition ("0") evaluates to true, and the code inside the if statement (alert('Hello')) will be executed. So,
+        the alert with the message "Hello" will be shown.</p>
+    <hr>
+    <h3>● What is the code below going to output? alert( null || 2 || undefined );</h3>
+    <p>The code will output 2. <br> <br>
+
+        In JavaScript, the || operator performs a logical OR operation. It returns the first truthy value encountered,
+        or the last value if all values are falsy. <br> <br>
+
+        In this case: <br> <br>
+
+        null is falsy. <br>
+        2 is truthy, so it is returned without evaluating further expressions. br
+
+        undefined is never evaluated. <br>
+        Therefore, 2 is the first truthy value encountered, so it will be output by the alert function.</p>
+    <hr>
+    <h3>● The following function returns true if the parameter age is greater than
+        18. Otherwise it asks for a confirmation and returns its result:
+    </h3>
+    <b><code>
+        <pre>
+            function checkAge(age)
+            {
+                if (age> 18) { return true; }
+            else {
+                // ...return confirm (‘did parents allow you?)
+                 }
+            }
+        </pre>
+    </code></b>
+    </code>
+    <p>Here's the corrected function with the confirmation dialog:</p>
+    <code>
+        <pre>
+            function checkAge(age) {
+                if (age > 18) {
+                    return true;
+                } else {
+                    return confirm('Did parents allow you?');
+                }
+            }
+            
+        </pre>
+    </code>
+    <p>This function checks if the age parameter is greater than 18. If it is, it returns true. Otherwise, it displays a
+        confirmation dialog asking if the parents allowed the action, and then returns the result of that confirmation
+        dialog.</p>
+    <hr>
+    <h3>● Replace Function Expressions with arrow functions in the code below:</h3>
+    <b>
+        <code>
+        <pre>
+            Function ask(question, yes, no)
+            { 
+                if{
+                (confirm(question))yes();
+                  }
+                else
+                {
+                no();
+                }
+                ask("Do you agree?", function())
+                { alert("You agreed."); },
+                function() {
+                alert("You canceled the execution."); }
+            }
+        </pre>
+    </code>
+    </b>
+    <p>Here's the code with arrow function expressions:</p>
+    <code>
+        <pre>
+            const ask = (question, yes, no) => {
+                if (confirm(question)) {
+                    yes();
+                } else {
+                    no();
+                }
+            };
+            
+            ask("Do you agree?", 
+                () => { alert("You agreed."); },
+                () => { alert("You canceled the execution."); }
+            );
+        </pre>
+    </code>
+    <p>In this version, I've replaced the function keyword with arrow function expressions (=>). Also, I've removed the
+        brackets around the if and else blocks because they are optional when there is only one statement inside.</p>
+    <hr>
+    <h2 style="text-align: center; font-size: 30px;">MODULE: 2 (Data Types and Objects)
+    </h2>
+    <h3>● Write the code, one line for each action:</h3>
+    <h4>a) Create an empty object user.</h4>
+
+    let user = {};
+
+    <h4>b) Add the property name with the value John.</h4>
+    user.name = 'John';
+
+    <h4>c) Add the property surname with the value Smith.</h4>
+    user.surname = 'Smith';
+
+    <h4>d) Change the value of the name to Pete.</h4>
+    user.name = 'Pete';
+
+    <h4>e) Remove the property name from the object.</h4>
+    delete user.name;
+    <hr>
+    <h3>● Is array copied?
+        let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+        shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+        alert( fruits.length ); // ?
+    </h3>
+    <p>In this scenario, the array fruits and the array shoppingCart are not copied; rather, they both refer to the same
+        array object in memory. So, when you push a new value into shoppingCart, it modifies the original fruits array
+        as well. <br>
+
+        Therefore, after pushing "Banana" into shoppingCart, the length of fruits will be 4. This is because both fruits
+        and shoppingCart are pointing to the same array object, so any modifications made through one reference will be
+        reflected in the other.
+    </p>
+    <hr>
+    <h3>● Map to names
+        let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
+        { name: "Mary", age: 28 }; let users = [ john, pete, mary ]; let names = /* ... your
+        code */ alert( names ); // John, Pete, Mary</h3>
+    <code>
+            <pre>
+                let john = { name: "John", age: 25 };
+                let pete = { name: "Pete", age: 30 };
+                let mary = { name: "Mary", age: 28 };
+                let users = [john, pete, mary];
+
+                let names = users.map(user => user.name);
+
+                alert(names); // John, Pete, Mary
+            </pre>
+        </code>
+    <hr>
+    <h3>● Map to objects
+        let john = { name: "John", surname: "Smith", id: 1 }; let pete = { name: "Pete",
+        surname: "Hunt", id: 2 }; let mary = { name: "Mary", surname: "Key", id: 3 }; let
+        users = [ john, pete, mary ]; let usersMapped = /* ... your code ... */
+        /*
+        <code>
+            <pre>usersMapped = [
+        { fullName: "John Smith", id: 1 },
+        { fullName: "Pete Hunt", id: 2 },
+        { fullName: "Mary Key", id: 3 }
+        ]</pre>
+        </code>
+        */ alert( usersMapped[0].id ) // 1 alert( usersMapped[0].fullName ) // John Smith
+    </h3>
+    <code>
+        <pre>
+            let john = { name: "John", surname: "Smith", id: 1 };
+            let pete = { name: "Pete", surname: "Hunt", id: 2 };
+            let mary = { name: "Mary", surname: "Key", id: 3 };
+            let users = [john, pete, mary];
+
+            let usersMapped = users.map(user => ({
+            fullName: `${user.name} ${user.surname}`,
+            id: user.id
+            }));
+
+            /*
+            usersMapped = [
+            { fullName: "John Smith", id: 1 },
+            { fullName: "Pete Hunt", id: 2 },
+            { fullName: "Mary Key", id: 3 }
+            ]
+            */
+
+            alert(usersMapped[0].id); // 1
+            alert(usersMapped[0].fullName); // John Smith
+
+        </pre>
+    </code>
+    <hr>
+    <h3>● Sum the properties There is a salaries object with arbitrary number of salaries. Write
+        the function sumSalaries(salaries) that returns the sum of all salaries using
+        Object.values and the for..of loop.If salaries is empty, then the result must be 0.
+        <code>
+    <pre>
+        let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+        };
+    </pre>
+</code>
+        alert( sumSalaries(salaries) ); // 650
+    </h3>
+    <code>
+        <pre>
+            function sumSalaries(salaries) {
+            let sum = 0;
+            for (let salary of Object.values(salaries)) {
+                sum += salary;
+            }
+            return sum;
+            }
+
+            let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+            };
+
+            alert(sumSalaries(salaries)); // 650
+        </pre>
+    </code>
+    <hr>
+    <h3>● Destructuring assignment We have an object: Write the Destructuring assignment that
+        reads:
+        a) Name property into the variable name.
+        b) Year’s property into the variable age.
+        c) isAdmin property into the variable isAdmin (false, if no such property)
+        d) let user = { name: "John", years: 30};
+    </h3>
+    let user = { name: "John", years: 30 };
+
+    <b>a) Name property into the variable name.</b>
+    let { name } = user;
+
+    <b>b) Year’s property into the variable age.</b>
+    let { years: age } = user;
+
+    <b>c) isAdmin property into the variable isAdmin (false, if no such property)</b>
+    let { isAdmin = false } = user;
+
+    console.log(name); // "John"
+    console.log(age); // 30
+    console.log(isAdmin); // false
+    <hr>
+    <h3>● Turn the object into JSON and back Turn the user into JSON and then read it back
+        into another variable.
+        user = { name: "John Smith", age: 35};</h3>
+    <code>
+    <pre>
+        let user = { name: "John Smith", age: 35 };
+
+            // Convert the object to JSON
+            let userJSON = JSON.stringify(user);
+
+            // Parse the JSON string back into an object
+            let newUser = JSON.parse(userJSON);
+
+            console.log(newUser); // { name: "John Smith", age: 35 }
+
+    </pre>
+</code>
+    <hr>
+    <h2 style="text-align: center; font-size: 30px;">MODULE: 3 (Document, Event and Controls)</h2>
+    <h3>● Create a program to hide/show the password</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password Visibility Toggle</title>
+        <style>
+            .container {
+                margin: 50px auto;
+                text-align: center;
+            }
+
+            .bg_color {
+                width: 400px;
+                height: 150px;
+                background-color: rgb(213, 210, 206);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="bg_color">
+                <h2>Password Visibility Toggle</h2>
+                <input type="password" id="password" placeholder="Enter your password">
+                <button id="toggleBtn">Show/Hide Password</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const passwordInput = document.getElementById("password");
+                const toggleButton = document.getElementById("toggleBtn");
+
+                toggleButton.addEventListener("click", function () {
+                    if (passwordInput.type === "password") {
+                        passwordInput.type = "text";
+                        toggleButton.textContent = "Hide Password";
+                    } else {
+                        passwordInput.type = "password";
+                        toggleButton.textContent = "Show Password";
+                    }
+                });
+            });
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Create a program that will select all the classes and loop over and whenever i click the
+        button the alert should show</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Class Selector</title>
+    </head>
+
+    <body>
+        <div class="class1">Class 1</div>
+        <div class="class2">Class 2</div>
+        <div class="class3">Class 3</div>
+        <button id="alertButton">Click Me</button>
+
+        <script>document.addEventListener("DOMContentLoaded", function () {
+                const alertButton = document.getElementById("alertButton");
+
+                alertButton.addEventListener("click", function () {
+                    const elementsWithClasses = document.querySelectorAll("[class]");
+
+                    elementsWithClasses.forEach(element => {
+                        alert(`Element with class: ${element.className}`);
+                    });
+                });
+            });
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Create a responsive header using proper JavaScript</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Header</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav {
+                display: flex;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+            }
+
+            .nav-links li {
+                margin-right: 20px;
+            }
+
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .burger {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            .line1,
+            .line2,
+            .line3 {
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">Logo</div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </header>
+
+        <script>
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    nav.classList.remove('nav-active');
+                    burger.classList.remove('toggle');
+                }
+            });
+
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Create a form and validate using JavaScript</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <style>
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+
+            input {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="myForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <span id="usernameError" class="error"></span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            const form = document.getElementById('myForm');
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                validateForm();
+            });
+
+            function validateForm() {
+                clearErrors();
+
+                let isValid = true;
+
+                if (username.value.trim() === '') {
+                    showError(usernameError, 'Username is required');
+                    isValid = false;
+                }
+
+                if (email.value.trim() === '') {
+                    showError(emailError, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(email.value)) {
+                    showError(emailError, 'Invalid email address');
+                    isValid = false;
+                }
+
+                if (password.value.trim() === '') {
+                    showError(passwordError, 'Password is required');
+                    isValid = false;
+                } else if (password.value.trim().length < 6) {
+                    showError(passwordError, 'Password must be at least 6 characters');
+                    isValid = false;
+                }
+
+                if (confirmPassword.value.trim() === '') {
+                    showError(confirmPasswordError, 'Please confirm password');
+                    isValid = false;
+                } else if (confirmPassword.value.trim() !== password.value.trim()) {
+                    showError(confirmPasswordError, 'Passwords do not match');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Form submitted successfully!');
+                    form.reset();
+                }
+            }
+
+            function clearErrors() {
+                usernameError.textContent = '';
+                emailError.textContent = '';
+                passwordError.textContent = '';
+                confirmPasswordError.textContent = '';
+            }
+
+            function showError(element, message) {
+                element.textContent = message;
+            }
+
+            function isValidEmail(email) {
+                // Simple email validation regex
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+
+
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Create a modal box using css and Js with three buttons</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modal Box</title>
+        <style>
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%;
+                max-width: 600px;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="modal-btn" data-modal-id="modal1">Open Modal 1</button>
+        <button class="modal-btn" data-modal-id="modal2">Open Modal 2</button>
+        <button class="modal-btn" data-modal-id="modal3">Open Modal 3</button>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Modal 1 Content</h2>
+                <p>This is the content of modal 1.</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Modal 2 Content</h2>
+                <p>This is the content of modal 2.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Modal 3 Content</h2>
+                <p>This is the content of modal 3.</p>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const modalBtns = document.querySelectorAll('.modal-btn');
+                const modals = document.querySelectorAll('.modal');
+
+                modalBtns.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        const modalId = btn.dataset.modalId;
+                        const modal = document.getElementById(modalId);
+                        modal.style.display = 'block';
+
+                        modal.querySelector('.close').addEventListener('click', function () {
+                            modal.style.display = 'none';
+                        });
+
+                        window.addEventListener('click', function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            });
+
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Use external js library to show slider</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slick Slider Example</title>
+        <!-- Slick Slider CSS -->
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+        <!-- Your own CSS -->
+        <style>
+            .slider {
+                width: 50%;
+                /* Set the width of the slider */
+                margin: auto;
+                /* Center the slider horizontally */
+            }
+
+            .img img {
+                width: 100%;
+                /* Set the width of the images to 100% */
+                height: auto;
+                /* Let the height adjust proportionally */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="slider">
+            <div class="img"><img src="../image/aaron-burden-9m5z1my-xZs-unsplash.jpg" alt="Image 1"></div>
+            <div class="img"><img src="../image/la-so-vk4vjTNVrTg-unsplash.jpg" alt="Image 2"></div>
+            <div class="img"><img src="../image/mario-purisic-jG1z5o7NCq4-unsplash.jpg" alt="Image 3"></div>
+        </div>
+
+        <!-- Slick Slider JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <!-- Your own JS -->
+        <script>
+            $(document).ready(function () {
+                $('.slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                    arrows: false
+                });
+            });
+
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h3>● Prevent the browser when i click the form submit button
+    </h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prevent Form Submission</title>
+    </head>
+
+    <body>
+        <form id="myForm2">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <button type="submit" id="subButton">Submit</button>
+        </form>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('myForm2');
+                const submitButton = document.getElementById('subButton');
+
+                submitButton.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default form submission behavior
+
+                    // Your custom form submission logic goes here
+                    // For example, you can validate the form fields or perform an AJAX request
+                    form.reset();
+                    // For demonstration purposes, let's just log a message
+                    console.log('Form submitted');
+                });
+            });
+
+        </script>
+    </body>
+
+    </html>
+    <hr>
+    <h2 style="text-align: center; font-size: 30px;">MODULE: 4 (New Request)</h2>
+    <h3>● What is JSON</h3>
+    <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and
+        write and easy for machines to parse and generate. It is based on a subset of the JavaScript programming
+        language, but is language-independent, meaning it can be used with most programming languages. <br> <br>
+
+        JSON is commonly used for transmitting data between a server and a web application, as well as for storing
+        configuration settings and data in files. It is often used in web development for APIs (Application Programming
+        Interfaces) where data needs to be exchanged between a client and a server. <br> <br>
+
+        JSON data is organized in key-value pairs, similar to JavaScript objects. It supports various data types,
+        including strings, numbers, booleans, arrays, and objects. Here is an example of JSON data:
+        <code>
+        <pre>
+            {
+                "name": "John",
+                "age": 30,
+                "isStudent": false,
+                "skills": ["JavaScript", "HTML", "CSS"],
+                "address": {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "country": "USA"
+                }
+              }
+              
+        </pre>
+    </code>
+    </p>
+    <hr>
+    <h3>● What is promises</h3>
+    <p>In JavaScript, a Promise is an object representing the eventual completion or failure of an asynchronous
+        operation, and its resulting value. It allows you to handle asynchronous operations more easily and cleanly,
+        avoiding deeply nested callback functions (known as "callback hell"). <br> <br>
+
+        Promises have three states: <br> <br>
+
+        <b>1. Pending:</b> Initial state, neither fulfilled nor rejected. <br>
+        <b>2. Fulfilled:</b> The operation completed successfully. <br>
+        <b>3. Rejected:</b> The operation failed. <br>
+        Promises can be created using the Promise constructor. The constructor takes a single argument, a function
+        called the "executor" function, which takes two parameters: resolve and reject. Inside the executor function,
+        you perform the asynchronous operation, and then call resolve(value) when it's successful or reject(reason) when
+        it fails. <br> <br>
+
+    </p>
+
+    <hr>
+    <h3>● Write a program of promises and handle that promises also</h3>
+    <code>
+        <pre>
+
+            const myPromise = new Promise((resolve, reject) => {
+                // Perform an asynchronous operation
+                setTimeout(() => {
+                  const randomNumber = Math.random();
+                  if (randomNumber > 0.5) {
+                    resolve(randomNumber); // Resolve with a value
+                  } else {
+                    reject(new Error('Random number is too low')); // Reject with an error
+                  }
+                }, 1000);
+              });
+              
+              // Consuming the Promise
+              myPromise.then((value) => {
+                console.log('Promise fulfilled with value:', value);
+              }).catch((error) => {
+                console.error('Promise rejected with error:', error);
+              });
+              
+        </pre>
+    </code>
+    <hr>
+    <h3>● Use fetch method for calling an api https://fakestoreapi.com/products</h3>
+    <code>
+    <pre>
+        fetch('https://fakestoreapi.com/products')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the JSON data
+            })
+            .then(data => {
+                console.log('API Response:', data); // Log the data to the console
+                // Here you can further process the data as needed
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </pre>
+</code>
+    <hr>
+    <h3>● Display all the product from the api in your HTML page</h3>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product List</title>
+        <style>
+            .product {
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+                padding: 20px;
+                background-color: #fff;
+                transition: transform 0.3s ease;
+            }
+
+            .product:hover {
+                transform: translateY(-5px);
+            }
+
+            .product img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 15px;
+                width: 200px;
+            }
+
+            .product h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .product p {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="productList"></div>
+
+        <script>
+            const productList = document.getElementById('productList');
+
+            fetch('https://fakestoreapi.com/products')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Parse the JSON data
+                })
+                .then(data => {
+                    // Loop through the array of products
+                    data.forEach(product => {
+                        // Create a div element for each product
+                        const productDiv = document.createElement('div');
+                        productDiv.classList.add('product');
+
+                        // Create HTML content for the product
+                        productDiv.innerHTML = `
+                            <h2>${product.title}</h2>
+                            <p><strong>Price:</strong> $${product.price}</p>
+                            <p><strong>Description:</strong> ${product.description}</p>
+                            <img src="${product.image}" alt="${product.title}">
+                        `;
+
+                        // Append the product div to the product list container
+                        productList.appendChild(productDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>
