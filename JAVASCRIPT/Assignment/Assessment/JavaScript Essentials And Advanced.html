@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            background: #000;
+            color: #000;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mySwiper2 {
+            height: 80%;
+            width: 100%;
+        }
+
+        .mySwiper {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1141549703/photo/on-the-wings-of-freedom-birds-flying-and-broken-chains-charge-concept.jpg?s=1024x1024&w=is&k=20&c=uBDPZZ7FFCfqUAx-7sk5pn0YrX-QJbmcNeKyDd4cF1A=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1009803562/photo/group-of-people-on-peak-mountain-climbing-helping-team-work-travel-trekking-success-business.jpg?s=2048x2048&w=is&k=20&c=eA6Upb1S8PXAQ2isdBjnXdxqI-oVEtAtDt6V2SEL1Ms=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1036100456/photo/glowing-light-bulb-standing-out-from-the-crowd.jpg?s=1024x1024&w=is&k=20&c=JbyTMZXbdAd-2APwqpzVD5-NerW-sECobZZT6wxCPYw=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1056445318/photo/neon-sign-on-brick-wall-background-free-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=z8Nql0TmpTlXoAO8IKMXF2WHUZ52ojrHzUMgK-gmYuw=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/615524918/photo/winner.jpg?s=1024x1024&w=is&k=20&c=l5IGUZkHwVeQ-KYTmc6jeGgMVRMy-uUH5sIppp0_HUI=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/603195908/photo/diving-into-dark-water-unknown-future.jpg?s=1024x1024&w=is&k=20&c=kslIQvxl4iGs4NCGXSBayqs_AJB9SQ7ZCNFbM_oHUMA=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/841390884/photo/door-opened-light.jpg?s=1024x1024&w=is&k=20&c=NkhpU6Zvs3Yb8uAq1ej18LkKnmT9qVAy_VKwAUXQ98A=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1458262103/photo/majestic-tiger-relaxing-at-a-beautiful-waterfall.jpg?s=2048x2048&w=is&k=20&c=O4iR5QOF-ycoZM5QPQN-bqewyF4HYN_mdNeqCLdDQ9E=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1585480845/photo/fantasy-woman-queen-red-hair-runs-in-autumn-forest-girl-in-long-elegant-royal-evening-vintage.jpg?s=2048x2048&w=is&k=20&c=R4Upk7DafoNZJpZKS7O7Q_HdhPpDqAhDFMQYo49mD8U=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1337260312/photo/floral-seamless-pattern-multicolored-flowers-peonies-on-a-black-background.jpg?s=2048x2048&w=is&k=20&c=uhJ-aDQmzfkVjTODBCG8dWp-jUcyD53PwO6t00YPd1Q=" />
+            </div>
+        </div>
+
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1141549703/photo/on-the-wings-of-freedom-birds-flying-and-broken-chains-charge-concept.jpg?s=1024x1024&w=is&k=20&c=uBDPZZ7FFCfqUAx-7sk5pn0YrX-QJbmcNeKyDd4cF1A=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1009803562/photo/group-of-people-on-peak-mountain-climbing-helping-team-work-travel-trekking-success-business.jpg?s=2048x2048&w=is&k=20&c=eA6Upb1S8PXAQ2isdBjnXdxqI-oVEtAtDt6V2SEL1Ms=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1036100456/photo/glowing-light-bulb-standing-out-from-the-crowd.jpg?s=1024x1024&w=is&k=20&c=JbyTMZXbdAd-2APwqpzVD5-NerW-sECobZZT6wxCPYw=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1056445318/photo/neon-sign-on-brick-wall-background-free-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=z8Nql0TmpTlXoAO8IKMXF2WHUZ52ojrHzUMgK-gmYuw=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/615524918/photo/winner.jpg?s=1024x1024&w=is&k=20&c=l5IGUZkHwVeQ-KYTmc6jeGgMVRMy-uUH5sIppp0_HUI=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/603195908/photo/diving-into-dark-water-unknown-future.jpg?s=1024x1024&w=is&k=20&c=kslIQvxl4iGs4NCGXSBayqs_AJB9SQ7ZCNFbM_oHUMA=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/841390884/photo/door-opened-light.jpg?s=1024x1024&w=is&k=20&c=NkhpU6Zvs3Yb8uAq1ej18LkKnmT9qVAy_VKwAUXQ98A=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1458262103/photo/majestic-tiger-relaxing-at-a-beautiful-waterfall.jpg?s=2048x2048&w=is&k=20&c=O4iR5QOF-ycoZM5QPQN-bqewyF4HYN_mdNeqCLdDQ9E=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1585480845/photo/fantasy-woman-queen-red-hair-runs-in-autumn-forest-girl-in-long-elegant-royal-evening-vintage.jpg?s=2048x2048&w=is&k=20&c=R4Upk7DafoNZJpZKS7O7Q_HdhPpDqAhDFMQYo49mD8U=" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="https://media.istockphoto.com/id/1337260312/photo/floral-seamless-pattern-multicolored-flowers-peonies-on-a-black-background.jpg?s=2048x2048&w=is&k=20&c=uhJ-aDQmzfkVjTODBCG8dWp-jUcyD53PwO6t00YPd1Q=" />
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 5.5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+</body>
+
+</html>
