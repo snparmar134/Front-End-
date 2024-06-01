@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
 
-      {isVisible === true && <MyComp name={change === true ? "Dhruv Malaviya" : "Ruchit Malaviya"}/>}
+      {isVisible === true && <MyComp name={change === true ? "Shubhangiba Parmar" : "Princy Wadhawaniya"}/>}
 
       <button onClick={()=>{setchange(true)}} >Click to change</button>
       <button onClick={()=>{setVisible(false)}}>Remove Component</button>
