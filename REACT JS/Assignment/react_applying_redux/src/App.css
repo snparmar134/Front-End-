@@ -1,0 +1,47 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.cart-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+  margin: 0 0 20px;
+}
+
+.cart-container p {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.cart-container button {
+
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cart-container button:hover {
+  background-color: #0056b3;
+}
+
+.cart-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
