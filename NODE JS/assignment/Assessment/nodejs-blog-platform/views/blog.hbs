@@ -1,0 +1,8 @@
+<h1>Blog Posts</h1>
+{{#each posts}}
+<article>
+    <h2><a href="/blog/{{this.id}}">{{this.title}}</a></h2>
+    <p class="meta">By {{this.author}} on {{this.date}}</p>
+    <p>{{this.content}}</p>
+</article>
+{{/each}}
