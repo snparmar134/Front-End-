@@ -6,26 +6,26 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
-// Middleware
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Set up Handlebars
+
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
-// Serve static files
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Mock database
+
 const blogPosts = [
   { id: 1, title: 'First Blog Post', content: 'This is the content of the first blog post.', author: 'Shubhangi', date: '2024-07-26' },
   { id: 2, title: 'Second Blog Post', content: 'This is the content of the second blog post.', author: 'Princy', date: '2024-07-27' },
   { id: 3, title: 'Third Blog Post', content: 'This is the content of the third blog post.', author: 'Ankita', date: '2024-07-28' },
 ];
 
-// Routes
+
 app.get('/', (req, res) => {
   res.render('home', { title: 'Home' });
 });
@@ -40,7 +40,6 @@ app.get('/contact', (req, res) => {
 
 app.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
-  // Here you would typically save this to a database or send an email
   console.log(`Received message from ${name} (${email}): ${message}`);
   res.render('contact', { title: 'Contact Us', messageSent: true });
 });
